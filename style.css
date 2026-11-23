@@ -92,9 +92,10 @@ pre{overflow-x:auto;font:400 10.5px/1.55 var(--mono);color:#cbd5e1}
 /* Projects */
 .projects{display:grid;gap:1.5rem;max-width:56rem;margin:3rem auto 0}
 .proj{display:flex;flex-direction:column;overflow:hidden}
-.proj-top{position:relative;display:grid;place-items:center;height:9rem;background:linear-gradient(135deg,#162E93,#080616 80%);color:var(--tint)}
+.proj-top{position:relative;display:grid;place-items:center;height:11rem;overflow:hidden;background:linear-gradient(135deg,#162E93,#080616 80%);color:var(--tint)}
 .proj-top svg.lucide{width:3.5rem;height:3.5rem}
-.proj-top b{position:absolute;left:1rem;top:.75rem;font:500 .875rem var(--mono)}
+.proj-top b{position:absolute;left:1rem;top:.75rem;z-index:1;padding:.125rem .5rem;border-radius:4px;background:rgba(8,6,22,.7);font:500 .875rem var(--mono)}
+.proj-top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 55%}
 .proj-body{display:flex;flex:1;flex-direction:column;padding:1.25rem}
 .proj-body p{flex:1;margin-top:.5rem;font-size:.875rem}
 .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}

@@ -13,7 +13,7 @@
 
 <header class="site">
   <nav class="wrap nav">
-    <a href="#top" class="logo">Rab<span>.dev</span></a>
+    <a href="#top" class="logo">Fadhly<span>.dev</span></a>
     <ul id="links" class="links"></ul>
     <button id="burger" class="burger" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
   </nav>
@@ -161,9 +161,9 @@ $('#skillGrid').innerHTML = [
 
 // url = null means the project is not available yet
 $('#projGrid').innerHTML = [
-  ['scan-search','EXIF-Guard (Forensic & Privacy Sanitizer)','Zero-trust image metadata forensic analyzer, interactive WGS84 GPS mapper, AI-tampering detector, and PSNR-verified privacy scrubber built with Python & Streamlit.',['Python','Cyber Security','Folium GIS','OpenCV'],null],
-  ['radio-tower','P.I.N.T.A.R. (GeoAI Telco Tower Allocation)','Enterprise-grade GeoAI platform that optimizes telecommunications tower allocation and climate resilience across Kuala Selangor, Selangor. It fuses WorldPop demographics, Sentinel-1 SAR flood footprints, SRTM terrain and existing tower data, then runs a multi-objective Pareto optimization engine directly in the browser.',['GeoAI','Pareto Optimization','Sentinel-1 SAR','Leaflet.js'],'https://danialgilmour.github.io/P.I.N.T.A.R./']
-].map(([i, t, d, tags, url], k) => `<article class="proj card lift"><div class="proj-top"><b>0${k + 1}</b><i data-lucide="${i}"></i></div><div class="proj-body"><h3>${t}</h3><p>${d}</p><div class="tags">${tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>${url
+  ['scan-search','EXIF-Guard (Forensic & Privacy Sanitizer)','Zero-trust image metadata forensic analyzer, interactive WGS84 GPS mapper, AI-tampering detector, and PSNR-verified privacy scrubber built with Python & Streamlit.',['Python','Cyber Security','Folium GIS','OpenCV'],null,null],
+  ['radio-tower','P.I.N.T.A.R. (GeoAI Telco Tower Allocation)','Enterprise-grade GeoAI platform that optimizes telecommunications tower allocation and climate resilience across Kuala Selangor, Selangor. It fuses WorldPop demographics, Sentinel-1 SAR flood footprints, SRTM terrain and existing tower data, then runs a multi-objective Pareto optimization engine directly in the browser.',['GeoAI','Pareto Optimization','Sentinel-1 SAR','Leaflet.js'],'https://danialgilmour.github.io/P.I.N.T.A.R./','pintar-map.jpg']
+].map(([i, t, d, tags, url, img], k) => `<article class="proj card lift"><div class="proj-top"><b>0${k + 1}</b>${img ? `<img src="${img}" alt="Screenshot of ${t}" loading="lazy">` : `<i data-lucide="${i}"></i>`}</div><div class="proj-body"><h3>${t}</h3><p>${d}</p><div class="tags">${tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>${url
   ? `<a href="${url}" target="_blank" rel="noopener" class="proj-link">View Project <i data-lucide="arrow-up-right" class="sm"></i></a>`
   : `<span class="proj-link off" aria-disabled="true" title="Not available yet"><i data-lucide="lock" class="sm"></i>In Development - Coming Soon</span>`}</div></article>`).join('');
 
