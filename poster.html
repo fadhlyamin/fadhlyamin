@@ -1,255 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXIF-Guard | Project Poster</title>
-  <!-- Load Mozilla PDF.js to render PDF reliably on GitHub Pages -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <style>
-    :root {
-      --primary: #1d4ed8;
-      --primary-hover: #1e40af;
-      --bg-color: #f1f5f9;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #475569;
-      --border: #e2e8f0;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 1.5rem 1rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .top-nav {
-      margin-bottom: 1rem;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-
-    .back-link:hover {
-      color: var(--primary);
-    }
-
-    .poster-section {
-      background: var(--card-bg);
-      border-radius: 16px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-      border: 1px solid var(--border);
-      overflow: hidden;
-    }
-
-    .poster-header {
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .poster-title h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      letter-spacing: -0.02em;
-    }
-
-    .poster-title p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .poster-actions {
-      display: flex;
-      gap: 0.75rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.1rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: none;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: #ffffff;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--border);
-    }
-
-    .btn-outline:hover {
-      background-color: #f8fafc;
-    }
-
-    /* Poster Canvas Container */
-    .poster-viewer {
-      background-color: #1e293b;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 500px;
-      overflow-x: auto;
-    }
-
-    #pdf-canvas {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-      background: #ffffff;
-    }
-
-    #status-msg {
-      color: #e2e8f0;
-      font-size: 0.95rem;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .poster-footer {
-      padding: 1rem 2rem;
-      background-color: #f8fafc;
-      border-top: 1px solid var(--border);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      gap: 0.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .poster-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXIF-Guard Poster | Fadhly.dev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="poster.css">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
-  <div class="container">
-    <nav class="top-nav">
-      <a href="../index.html" class="back-link">← Back to Main Page</a>
-    </nav>
+<header class="site">
+  <nav class="wrap nav">
+    <a href="index.html#projects" class="btn ghost"><i data-lucide="arrow-left" class="sm"></i>Back</a>
+    <a href="index.html" class="logo">Fadhly<span>.dev</span></a>
+  </nav>
+</header>
 
-    <section class="poster-section">
-      <!-- Header -->
-      <div class="poster-header">
-        <div class="poster-title">
-          <h1>EXIF-GUARD</h1>
-          <p>An Automated Image Metadata Forensic Analyzer & Privacy Sanitization Tool</p>
-        </div>
-
-        <div class="poster-actions">
-          <a id="fullscreen-btn" href="../EXIF-POSTER.pdf" target="_blank" class="btn btn-outline">
-            🔍 Open Fullscreen
-          </a>
-          <a id="download-btn" href="../EXIF-POSTER.pdf" download="EXIF-Guard-Poster.pdf" class="btn btn-primary">
-            ⬇ Download PDF
-          </a>
-        </div>
-      </div>
-
-      <!-- Poster Canvas -->
-      <div class="poster-viewer">
-        <div id="status-msg">Loading poster...</div>
-        <canvas id="pdf-canvas" style="display: none;"></canvas>
-      </div>
-
-      <!-- Footer -->
-      <div class="poster-footer">
-        <span><strong>Author:</strong> Fadhly Amin bin Mohtar (UNITEN)</span>
-        <span><strong>Supervisor:</strong> Dr. Iznora Aini Binti Zolkifly</span>
-      </div>
-    </section>
+<main class="wrap poster-page">
+  <div class="center">
+    <span class="eyebrow">Featured Project</span>
+    <h1>EXIF-Guard Poster</h1>
+    <p class="sub">An automated image metadata forensic analyzer &amp; privacy sanitization tool: Zero-Trust Metadata Intelligence.</p>
   </div>
 
-  <script>
-    // TUKAR NAMA FAIL INI JIKA NAMA FAIL DALAM GITHUB ANDA BERBEZA (Contoh: 'EXIF POSTER.pdf' atau '../EXIF-POSTER.pdf')
-    const pdfUrl = '../EXIF-POSTER.pdf';
+  <div class="poster-actions">
+    <button id="fsBtn" class="btn"><i data-lucide="maximize" class="sm"></i>Open fullscreen</button>
+    <a class="btn ghost" href="EXIF-Guard-Poster.jpg" download="EXIF-Guard-Poster.jpg"><i data-lucide="download" class="sm"></i>Download JPG</a>
+  </div>
 
-    // Kemaskini pautan butang secara automatik
-    document.getElementById('fullscreen-btn').href = pdfUrl;
-    document.getElementById('download-btn').href = pdfUrl;
+  <figure id="stage" class="poster-stage">
+    <img id="poster" src="EXIF-Guard-Poster.jpg" alt="EXIF-Guard research poster: introduction, objectives, related works, methodology, proposed solution, commercialization, impact and conclusion">
+    <button id="exitBtn" class="btn ghost exit" aria-label="Close fullscreen"><i data-lucide="x" class="sm"></i>Close</button>
+  </figure>
+</main>
 
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+<script>
+const stage = document.getElementById('stage');
+const isFull = () => stage.classList.contains('is-full');
 
-    const canvas = document.getElementById('pdf-canvas');
-    const ctx = canvas.getContext('2d');
-    const statusMsg = document.getElementById('status-msg');
+function openFull() {
+  stage.classList.add('is-full');
+  // Real fullscreen where supported; the fixed overlay is the fallback (e.g. iPhone Safari)
+  if (stage.requestFullscreen) stage.requestFullscreen().catch(() => {});
+}
+function closeFull() {
+  stage.classList.remove('is-full', 'zoom');
+  if (document.fullscreenElement) document.exitFullscreen();
+}
 
-    pdfjsLib.getDocument(pdfUrl).promise.then(pdf => {
-      return pdf.getPage(1);
-    }).then(page => {
-      const scale = 2.0; // Resolusi tajam (HD)
-      const viewport = page.getViewport({ scale: scale });
+document.getElementById('fsBtn').onclick = openFull;
+document.getElementById('exitBtn').onclick = closeFull;
+// In fullscreen, clicking the poster toggles between fit-to-screen and a larger readable size
+document.getElementById('poster').onclick = () => isFull() ? stage.classList.toggle('zoom') : openFull();
+document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement) closeFull(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && isFull()) closeFull(); });
 
-      canvas.height = viewport.height;
-      canvas.width = viewport.width;
-
-      const renderContext = {
-        canvasContext: ctx,
-        viewport: viewport
-      };
-
-      return page.render(renderContext).promise;
-    }).then(() => {
-      statusMsg.style.display = 'none';
-      canvas.style.display = 'block';
-    }).catch(err => {
-      statusMsg.innerHTML = `
-        <p style="color: #fca5a5; font-weight: 600; margin-bottom: 0.5rem;">Failed to load PDF file (${pdfUrl})</p>
-        <p style="font-size: 0.85rem;">Make sure the PDF filename and folder path in your GitHub repository match <strong>${pdfUrl}</strong> exactly.</p>
-      `;
-      console.error(err);
-    });
-  </script>
-
+lucide.createIcons();
+</script>
 </body>
 </html>
