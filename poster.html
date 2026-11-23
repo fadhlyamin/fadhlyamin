@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXIF-Guard | Project Poster</title>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .poster-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    /* Header / Top Bar */
+    .poster-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .poster-title h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .poster-title p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Action Buttons */
+    .poster-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-outline:hover {
+      background-color: #f8fafc;
+    }
+
+    /* Poster Display Container */
+    .poster-viewer {
+      background-color: #1e293b;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pdf-frame {
+      width: 100%;
+      height: 85vh;
+      min-height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+      background: #ffffff;
+    }
+
+    /* Footer Metadata */
+    .poster-footer {
+      padding: 1rem 2rem;
+      background-color: #f8fafc;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .poster-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .pdf-frame {
+        height: 65vh;
+        min-height: 450px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="poster-section">
+    <!-- Header -->
+    <div class="poster-header">
+      <div class="poster-title">
+        <h1>EXIF-GUARD</h1>
+        <p>An Automated Image Metadata Forensic Analyzer & Privacy Sanitization Tool</p>
+      </div>
+
+      <div class="poster-actions">
+        <a href="EXIF-POSTER.pdf" target="_blank" class="btn btn-outline">
+          🔍 Open Fullscreen
+        </a>
+        <a href="EXIF-POSTER.pdf" download="EXIF-Guard-Poster.pdf" class="btn btn-primary">
+          ⬇ Download PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- Poster Frame -->
+    <div class="poster-viewer">
+      <iframe 
+        src="EXIF-POSTER.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+        class="pdf-frame" 
+        title="EXIF-Guard Research Poster">
+        <p style="color: white; text-align: center; padding: 2rem;">
+          Your browser does not support inline PDF viewing. 
+          <a href="EXIF-POSTER.pdf" style="color: #60a5fa;">Click here to download the poster.</a>
+        </p>
+      </iframe>
+    </div>
+
+    <!-- Footer -->
+    <div class="poster-footer">
+      <span><strong>Author:</strong> Fadhly Amin bin Mohtar (UNITEN)</span>
+      <span><strong>Supervisor:</strong> Dr. Iznora Aini Binti Zolkifly</span>
+    </div>
+  </section>
+
+</body>
+</html>
