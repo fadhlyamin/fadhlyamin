@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fadhly Amin | Cyber Security & Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.383.0/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <nav class="wrap nav">
+    <a href="#top" class="logo">Fadhly<span>.dev</span></a>
+    <ul id="links" class="links"></ul>
+    <button id="burger" class="burger" aria-label="Toggle menu"><i data-lucide="menu"></i></button>
+  </nav>
+  <ul id="mlinks" class="mlinks"></ul>
+</header>
+
+<main id="top">
+  <!-- 1. Hero -->
+  <section class="wrap hero">
+    <div>
+      <span class="badge">Cyber Security &amp; Full-Stack Developer</span>
+      <h1>Hi, I'm <span class="hl">Fadhly Amin</span><br>I build secure, intelligent digital solutions.</h1>
+      <p class="lead">I'm a final-year Bachelor of Computer Science (Cyber Security) student at UNITEN, passionate about bridging cyber defense, geospatial AI, and user-centric software engineering.</p>
+      <div class="cta"><a href="#projects" class="btn">View My Work <i data-lucide="arrow-up-right" class="sm"></i></a></div>
+      <p class="label">Technologies I work with</p>
+      <ul id="tech" class="tech"></ul>
+    </div>
+    <div class="visual">
+      <div class="glow"></div>
+      <div class="clip">
+        <svg viewBox="0 0 320 320" role="img" aria-label="Developer avatar placeholder">
+          <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" class="st1"/><stop offset="1" class="st2"/></linearGradient></defs>
+          <path class="av-body" d="M20 320c0-70 50-105 105-115h70c55 10 105 45 105 115z"/>
+          <rect class="av-neck" x="138" y="170" width="44" height="45" rx="14"/>
+          <ellipse class="av-head" cx="160" cy="118" rx="52" ry="62"/>
+          <path class="av-hair" d="M106 108c-4-48 36-66 62-62 30 4 46 28 42 62-14-22-38-30-60-28-18 2-34 10-44 28z"/>
+          <path class="av-eyes" d="M118 128h30m24 0h30"/>
+        </svg>
+      </div>
+      <div class="glass code">
+        <div class="code-bar"><span>&lt;/&gt; engineer.js</span><i class="dot"></i></div>
+<pre><span class="k">const</span> engineer = {
+  name: <span class="s">"Fadhly Amin Bin Mohtar"</span>,
+  base: <span class="s">"Johor Bahru, Malaysia"</span>,
+  school: <span class="s">"SMKA Johor Bahru -&gt; UNITEN"</span>,
+  focus: [<span class="s">"Cyber Security"</span>, <span class="s">"GeoAI"</span>, <span class="s">"UX Design"</span>],
+  stack: [<span class="s">"Python"</span>, <span class="s">"JS"</span>, <span class="s">"C++"</span>, <span class="s">"Java"</span>, <span class="s">"SQL"</span>]
+};</pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. About -->
+  <section id="about" class="band sec">
+    <div class="wrap about">
+      <div>
+        <span class="badge">About me</span>
+        <h2>I'm passionate about securing &amp; building smart systems</h2>
+        <p>Rooted in <b>Johor Bahru</b> and an alumnus of <b>SMKA Johor Bahru</b>, I'm now in my final year of Cyber Security studies at <b>UNITEN</b>. Alongside my degree I've earned industry certifications in <b>Cisco CCNA, Machine Learning, Data Science, ASEAN GeoAI Explorer (UM-Wales / MCMC)</b>, and <b>Google UX Design</b>.</p>
+      </div>
+      <div id="stats" class="stats"></div>
+    </div>
+  </section>
+
+  <!-- 3. Skills -->
+  <section id="skills" class="sec">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">My Skills</span>
+        <h2>Technologies &amp; Domains I Master</h2>
+        <div class="rule"></div>
+      </div>
+      <div id="skillGrid" class="skills"></div>
+    </div>
+  </section>
+
+  <!-- 4. Projects -->
+  <section id="projects" class="band sec">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">Featured Projects</span>
+        <h2>Some of My Recent Work</h2>
+        <div class="rule"></div>
+      </div>
+      <div id="projGrid" class="projects"></div>
+    </div>
+  </section>
+
+  <!-- 5. Certifications & contact -->
+  <section id="certifications" class="sec">
+    <div class="wrap contact">
+      <div id="contact">
+        <span class="eyebrow">Let's work together</span>
+        <h2>Have a project or internship opportunity in mind?</h2>
+        <button id="openModal" class="btn">Get In Touch <i data-lucide="arrow-up-right" class="sm"></i></button>
+      </div>
+      <div class="card certs-card">
+        <div class="certs-head"><i data-lucide="badge-check"></i><h3>Verified Credentials</h3></div>
+        <ul id="certs" class="certs"></ul>
+      </div>
+      <div>
+        <span class="eyebrow">Follow me</span>
+        <div class="social">
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="tile lift"><i data-lucide="github"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="tile lift"><i data-lucide="linkedin"></i></a>
+          <a href="mailto:fadhlyamin23@gmail.com" aria-label="Email" class="tile lift"><i data-lucide="mail"></i></a>
+        </div>
+        <ul class="info">
+          <li><i data-lucide="mail"></i><a href="mailto:fadhlyamin23@gmail.com">fadhlyamin23@gmail.com</a></li>
+          <li><i data-lucide="map-pin"></i>Johor Bahru / Kajang, Malaysia</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>&copy; <span id="yr"></span> Fadhly Amin. All rights reserved.</span><span>Built with secure code &amp; coffee</span></div>
+</footer>
+
+<dialog id="modal">
+  <form id="cform" class="form">
+    <div class="form-head"><h3>Get In Touch</h3><button type="button" id="closeModal" aria-label="Close"><i data-lucide="x"></i></button></div>
+    <input id="fn" required placeholder="Your name">
+    <input id="fe" type="email" required placeholder="Your email">
+    <textarea id="fm" required rows="4" placeholder="Tell me about your project or opportunity"></textarea>
+    <button class="btn">Send message</button>
+    <small>This opens your email app with the message ready to send.</small>
+  </form>
+</dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+const navHTML = ['About', 'Skills', 'Projects', 'Certifications', 'Contact'].map(n => `<li><a href="#${n.toLowerCase()}">${n}</a></li>`).join('');
+$('#links').innerHTML = navHTML; $('#mlinks').innerHTML = navHTML;
+$('#burger').onclick = () => $('#mlinks').classList.toggle('open');
+$('#mlinks').onclick = () => $('#mlinks').classList.remove('open');
+
+$('#tech').innerHTML = [['Py','Python'],['JS','JavaScript'],['H5','HTML5'],['C3','CSS3'],['C++','C++'],['Jv','Java'],['SQL','SQL']]
+  .map(([a, t]) => `<li class="tile lift" title="${t}" aria-label="${t}">${a}</li>`).join('');
+
+$('#stats').innerHTML = [
+  ['graduation-cap','Final Year','B.Comp.Sc (Cyber Security), UNITEN'],
+  ['code','7+ Languages','Python, JS, C++, Java, SQL, HTML/CSS'],
+  ['award','5+ Certifications','CCNA, GeoAI, ML, Data Science, UX'],
+  ['shield-check','100% Focus','Zero-Trust Security & Clean UX']
+].map(([i, v, l]) => `<div class="stat card lift"><span class="stat-icon"><i data-lucide="${i}"></i></span><div><strong>${v}</strong><small>${l}</small></div></div>`).join('');
+
+$('#skillGrid').innerHTML = [
+  ['Programming & Web', [['terminal','Python',95],['braces','JavaScript',88],['code','HTML5 & CSS3',92]]],
+  ['Core Software & Data', [['cpu','C++',85],['coffee','Java',85],['database','SQL Database',88]]],
+  ['Security, AI & Design', [['shield-check','Cyber Security & CCNA',90],['brain','Machine Learning & GeoAI',85],['pen-tool','Google UI/UX Design',88]]]
+].map(([h, items]) => `<div><h3>${h}</h3>${items.map(([i, n, p]) =>
+  `<div class="skill"><div class="skill-row"><span><i data-lucide="${i}"></i>${n}</span><span>${p}%</span></div><div class="bar"><i class="p${p}"></i></div></div>`).join('')}</div>`).join('');
+
+// url = null means the project is not available yet
+$('#projGrid').innerHTML = [
+  ['scan-search','EXIF-Guard (Forensic & Privacy Sanitizer)','Zero-trust image metadata forensic analyzer, interactive WGS84 GPS mapper, AI-tampering detector, and PSNR-verified privacy scrubber built with Python & Streamlit.',['Python','Cyber Security','Folium GIS','OpenCV'],null,null],
+  ['radio-tower','P.I.N.T.A.R. (GeoAI Telco Tower Allocation)','Enterprise-grade GeoAI platform that optimizes telecommunications tower allocation and climate resilience across Kuala Selangor, Selangor. It fuses WorldPop demographics, Sentinel-1 SAR flood footprints, SRTM terrain and existing tower data, then runs a multi-objective Pareto optimization engine directly in the browser.',['GeoAI','Pareto Optimization','Sentinel-1 SAR','Leaflet.js'],'https://danialgilmour.github.io/P.I.N.T.A.R./','pintar-map.jpg']
+].map(([i, t, d, tags, url, img], k) => `<article class="proj card lift"><div class="proj-top"><b>0${k + 1}</b>${img ? `<img src="${img}" alt="Screenshot of ${t}" loading="lazy">` : `<i data-lucide="${i}"></i>`}</div><div class="proj-body"><h3>${t}</h3><p>${d}</p><div class="tags">${tags.map(x => `<span class="tag">${x}</span>`).join('')}</div>${url
+  ? `<a href="${url}" target="_blank" rel="noopener" class="proj-link">View Project <i data-lucide="arrow-up-right" class="sm"></i></a>`
+  : `<span class="proj-link off" aria-disabled="true" title="Not available yet"><i data-lucide="lock" class="sm"></i>In Development - Coming Soon</span>`}</div></article>`).join('');
+
+$('#certs').innerHTML = ['Cisco CCNA','Certificate of GeoAI Explorer (Universiti Malaya-Wales & MCMC)','Google Foundations of UX Design (Coursera)','Machine Learning','Data Science']
+  .map(c => `<li><i data-lucide="check-circle-2"></i>${c}</li>`).join('');
+
+$('#yr').textContent = new Date().getFullYear();
+lucide.createIcons();
+
+// Skill bars fill when scrolled into view (widths are defined in styles.css)
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+}), { threshold: .4 });
+document.querySelectorAll('.bar i').forEach(b => io.observe(b));
+
+// Contact modal opens the visitor's email app with the message prefilled
+const m = $('#modal');
+$('#openModal').onclick = () => m.showModal();
+$('#closeModal').onclick = () => m.close();
+m.addEventListener('click', e => { if (e.target === m) m.close(); });
+$('#cform').onsubmit = e => {
+  e.preventDefault();
+  const body = `${$('#fm').value}\n\n- ${$('#fn').value} (${$('#fe').value})`;
+  location.href = `mailto:fadhlyamin23@gmail.com?subject=${encodeURIComponent('Portfolio enquiry from ' + $('#fn').value)}&body=${encodeURIComponent(body)}`;
+  m.close();
+};
+</script>
+</body>
+</html>
